@@ -137,7 +137,7 @@ export function createStore(reducer, initialState) {
   return { dispatch, subscribe, getState, replaceReducer };
 }
 ```
-[разбор файловой иерархии формата TypeScript в redux/src](https://github.com/reduxjs/redux/tree/master/src)
+[разбор файловой иерархии формата TypeScript в redux/src](https://github.com/Legabog/source-code-analysis-redux-legabog/blob/redux/src/README.md)
 
 
 
