@@ -5,7 +5,7 @@
 -----------
 [Redux JS code in 100 lines](https://gist.github.com/gaearon/ffd88b0e4f00b22c3159)
 -----------
-`JS code`
+`JS source code in 100 lines`
 -----------
 ```
 function mapValues(obj, fn) { // функция mapValues принимает в качестве аргументов объект и функцию
@@ -98,20 +98,20 @@ export function createStore(reducer, initialState) {
   var listeners = [];
   var isDispatching = false;
 
-  function getState() {
+  function getState() { // getState - возвращает текущий State
     return currentState;
   }
 
-  function subscribe(listener) {
+  function subscribe(listener) { subscribe - слушатель событий, подписываемся на изменения state
     listeners.push(listener);
 
-    return function unsubscribe() {
+    return function unsubscribe() { // в конце отписываемся unsubscribe()
       var index = listeners.indexOf(listener);
       listeners.splice(index, 1);
     };
   }
 
-  function dispatch(action) {
+  function dispatch(action) { // dispatch - функция диспетчер
     if (isDispatching) {
       throw new Error('Reducers may not dispatch actions.');
     }
@@ -137,6 +137,7 @@ export function createStore(reducer, initialState) {
   return { dispatch, subscribe, getState, replaceReducer };
 }
 ```
+[разбор файловой иерархии формата TypeScript в redux/src](https://github.com/reduxjs/redux/tree/master/src)
 
 
 
