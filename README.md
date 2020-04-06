@@ -1,4 +1,7 @@
-# code-analysis-redux-legabog
+# Redux
+![image](https://user-images.githubusercontent.com/44378669/78541042-b2e4ed00-77fd-11ea-91df-f21f4d72aa2f.png)
+# source-code-analysis-redux-legabog
+
 
 redux/src/compose.ts
 Функциональное композиция
