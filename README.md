@@ -112,22 +112,22 @@ export function createStore(reducer, initialState) {
   }
 
   function dispatch(action) { // dispatch - функция диспетчер
-    if (isDispatching) {
-      throw new Error('Reducers may not dispatch actions.');
+    if (isDispatching) { // если isDispatching === true 
+      throw new Error('Reducers may not dispatch actions.'); // выкидываем ошибку 'Reducers may not dispatch actions.'
     }
 
     try {
-      isDispatching = true;
-      currentState = currentReducer(currentState, action);
+      isDispatching = true; // в процессе dispatch выставляем свойство isDispatch в true
+      currentState = currentReducer(currentState, action); // изменение state за счёт currentReducer
     } finally {
-      isDispatching = false;
+      isDispatching = false; // всегда в конечном итоге в конечной части конструкции выставляем в свойство isDispatching = false 
     }
 
-    listeners.slice().forEach(listener => listener());
+    listeners.slice().forEach(listener => listener()); // делаем копию массива listeners для каждого элемента выполняем функцию слушателя
     return action;
   }
 
-  function replaceReducer(nextReducer) {
+  function replaceReducer(nextReducer) { // функция перехода к следующему Reducer
     currentReducer = nextReducer;
     dispatch({ type: '@@redux/INIT' });
   }
