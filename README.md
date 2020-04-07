@@ -11,9 +11,9 @@
 -----
 [compose.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/tree/compose.ts)
 -----
-[createStore.ts](https://github.com/reduxjs/redux/tree/master/src)
+[createStore.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/tree/createStore.ts)
 -----
-[index.ts](https://github.com/reduxjs/redux/tree/master/src)
+[index.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/tree/index.ts)
 -----
 
 
