@@ -67,20 +67,28 @@ export default function applyMiddleware(
 ```
 `Код на JS`
 ```
-export default function applyMiddleware(...middlewares) { // функция applyMiddlewares получает на входе массив из всех переданных  
-//middlewares с помощью ...(rest оператора) оператора расширения  
+// функция applyMiddlewares получает на входе массив из всех переданных middlewares с помощью ...(rest оператора) оператора расширения: [middlware[0], middlware[1], middlware[2], middlware[3] ...]
+export default function applyMiddleware(...middlewares) { 
+// возвращает стрелочную функцию, у функции 
     return (createStore) => (reducer, ...args) => {
+// объявляем store, присваиваем значение createStore, первый аргумент reducer, второй  массив из args(на этом месте должен быть initialState)   
         const store = createStore(reducer, ...args);
+// объявляем dispatch, стрелочная функция         
         let dispatch = () => {
             throw new Error('Dispatching while constructing your middleware is not allowed. ' +
                 'Other middleware would not be applied to this dispatch.');
         };
+// объявляем объект middlewareAPI
         const middlewareAPI = {
+// свойства getState и dispatch        
             getState: store.getState,
             dispatch: (action, ...args) => dispatch(action, ...args)
         };
-        const chain = middlewares.map(middleware => middleware(middlewareAPI));
+// объявляем chain, цепочка выполнения middllewares, мапим все значения        
+        const chain = middlewares.map(middleware => middleware(middlewareAPI))
+// dispatch присваиваем функцию compose, которая представялет собой функциональную композицию, ()() каррирование, параметризация
         dispatch = compose(...chain)(store.dispatch);
+// возвращаем на выходе копию копии store, с дизструктуризацией dispatch        
         return Object.assign(Object.assign({}, store), { dispatch });
     };
 }
