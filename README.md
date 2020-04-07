@@ -1,11 +1,10 @@
-redux/src/applyMiddleware.ts
+# redux/src/applyMiddleware.ts
 
-//Middleware - расширение функциональности redux, дополнительная прослойка  
-
-//applyMiddleware() - связывает store с middleware 
-//основной принцип конвеер, первый middleare самостоятельно отрабатывает и запускает следующий middleware(1 -> 2 -> 3 -> ...)
-//применяется концепция каррирования
-
+Middleware - расширение функциональности redux, дополнительная прослойка  
+applyMiddleware() - связывает store с middleware   
+основной принцип конвеер, первый middleare самостоятельно отрабатывает и запускает следующий middleware(1 -> 2 -> 3 -> ...)  
+применяется концепция каррирования  
+  
 `Код на TS`  
 ```
 export default function applyMiddleware(): StoreEnhancer
