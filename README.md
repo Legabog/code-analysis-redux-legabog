@@ -69,7 +69,7 @@ export default function applyMiddleware(
 ```js
 // функция applyMiddlewares получает на входе массив из всех переданных middlewares с помощью ...(rest оператора) оператора расширения: [middlware[0], middlware[1], middlware[2], middlware[3] ...]
 export default function applyMiddleware(...middlewares) { 
-// возвращает стрелочную функцию, у функции 
+// возвращает стрелочную функцию
     return (createStore) => (reducer, ...args) => {
 // объявляем store, присваиваем значение createStore, первый аргумент reducer, второй  массив из args(на этом месте должен быть initialState)   
         const store = createStore(reducer, ...args);
