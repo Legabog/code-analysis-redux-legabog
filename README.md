@@ -63,9 +63,9 @@ export function compose(...funcs) {
 
 //-----Middleware-----
 // Расширение функциональности redux, дополнительная прослойка
-//applyMiddleware() - связывает store с middleware 
-//основной принцип конвеер, первый middleare самостоятельно отрабатывает и запускает следующий middleware(1 -> 2 -> 3 -> ...)
-//применяется концепция каррирования
+// applyMiddleware() - связывает store с middleware 
+// основной принцип конвеер, первый middleare самостоятельно отрабатывает и запускает следующий middleware(1 -> 2 -> 3 -> ...)
+// применяется концепция каррирования
 
 export function applyMiddleware(...middlewares) {
   return (next) => (reducer, initialState) => {
@@ -83,14 +83,14 @@ export function applyMiddleware(...middlewares) {
   };
 }
 
-//-----combineReducers-----
-//функция объединяющая множество reducers, в отдельную абстрагированную часть
+// -----combineReducers-----
+// функция объединяющая множество reducers, в отдельную абстрагированную часть
 
-export function combineReducers(reducers) { // В конструкции данной функции используется ранее объявленная функция pick и mapValues
+export function combineReducers(reducers) { // в конструкции данной функции используется ранее объявленная функция pick и mapValues
   var finalReducers = pick(reducers, (val) => typeof val === 'function');
   return (state = {}, action) => mapValues(finalReducers,
     (reducer, key) => reducer(state[key], action)
-    // Возвращает callback фунцию, прогоняет все значения reducers с помощью map, на выходе возвращается reducer
+    // возвращает callback фунцию, прогоняет все значения reducers с помощью map, на выходе возвращается reducer
   );
 }
 
