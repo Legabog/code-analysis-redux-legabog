@@ -7,9 +7,9 @@
 -----
 [bindActionCreators.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/blob/bindActionCreators.ts/README.md)
 -----
-[combineReducers.ts](https://github.com/reduxjs/redux/tree/master/src)
+[combineReducers.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/tree/combineReducers.ts)
 -----
-[compose.ts](https://github.com/reduxjs/redux/tree/master/src)
+[compose.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/tree/compose.ts)
 -----
 [createStore.ts](https://github.com/reduxjs/redux/tree/master/src)
 -----
