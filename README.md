@@ -48,8 +48,10 @@ export default function bindActionCreators(
   }
   return boundActionCreators
 }
-
+```
+  
 `Код на JS`
+```
 // объявление функции bindActionCreators с аргументами actionCreators, dispatch
 export default function bindActionCreators(actionCreators, dispatch) { 
 // если тип actionCreators равен функции, то возвращается bindActionCreator(actionCreators, dispatch)
