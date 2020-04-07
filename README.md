@@ -67,7 +67,7 @@ export default function applyMiddleware(
 ```
 `Код на JS`
 ```
-export default function applyMiddleware(...middlewares) {
+export default function applyMiddleware(...middlewares) { // функция applyMiddlewares получает на входе массив из всех переданных                                                               middlewares с помощью ...(rest оператора) оператора расширения
     return (createStore) => (reducer, ...args) => {
         const store = createStore(reducer, ...args);
         let dispatch = () => {
