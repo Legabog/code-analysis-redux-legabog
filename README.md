@@ -6,7 +6,7 @@ applyMiddleware() - связывает store с middleware
 применяется концепция каррирования  
   
 `Код на TS`  
-```
+```ts
 export default function applyMiddleware(): StoreEnhancer
 export default function applyMiddleware<Ext1, S>(
   middleware1: Middleware<Ext1, S, any>
@@ -66,7 +66,7 @@ export default function applyMiddleware(
 }
 ```
 `Код на JS`
-```
+```js
 // функция applyMiddlewares получает на входе массив из всех переданных middlewares с помощью ...(rest оператора) оператора расширения: [middlware[0], middlware[1], middlware[2], middlware[3] ...]
 export default function applyMiddleware(...middlewares) { 
 // возвращает стрелочную функцию, у функции 
