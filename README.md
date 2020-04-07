@@ -10,7 +10,9 @@
 ```
 function mapValues(obj, fn) { // функция mapValues принимает в качестве аргументов объект и функцию
   return Object.keys(obj).reduce((result, key) => { 
-  // возвращает массив свойств объекта и с помощью reduce применяет callback функцию к кажому свойству, начальное значение пустой объект {}, в callback фунцию в качестве аргументов передаётся result и key, result от ключа равен функции fn(obj[key], key).  
+  // возвращает массив свойств объекта и с помощью reduce применяет callback функцию  
+  // к кажому свойству, начальное значение пустой объект {}, в callback фунцию в  
+  //качестве аргументов передаётся result и key, result от ключа равен функции fn(obj[key], key).  
     result[key] = fn(obj[key], key);
     return result;
   }, {});
