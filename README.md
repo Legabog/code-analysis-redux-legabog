@@ -7,7 +7,7 @@
 -----------
 `JS source code in 100 lines`
 -----------
-```
+```js
 function mapValues(obj, fn) { // функция mapValues принимает в качестве аргументов объект и функцию
   return Object.keys(obj).reduce((result, key) => { 
   // возвращает массив свойств объекта и с помощью reduce применяет callback функцию  
