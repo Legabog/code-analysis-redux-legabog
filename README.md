@@ -1,6 +1,6 @@
 # redux/src/index.ts
 `Код на TS`
-```
+```ts
 // functions
 import createStore from './createStore'
 import combineReducers from './combineReducers'
@@ -71,7 +71,7 @@ export {
 }
 ```
 `Код на JS`
-```
+```js
 // functions
 import createStore from './createStore';
 import combineReducers from './combineReducers';
