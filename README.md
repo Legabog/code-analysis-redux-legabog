@@ -5,7 +5,7 @@
 -----
 [applyMidddleware.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/blob/applyMiddleware.ts/README.md)
 -----
-[bindActionCreators.ts](https://github.com/reduxjs/redux/tree/master/src)
+[bindActionCreators.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/blob/bindActionCreators.ts/README.md)
 -----
 [combineReducers.ts](https://github.com/reduxjs/redux/tree/master/src)
 -----
