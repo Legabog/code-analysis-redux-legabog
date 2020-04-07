@@ -3,7 +3,7 @@
 -----
 `branches`
 -----
-[applyMidddleware.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/blob/applyMiddleware.ts)
+[applyMidddleware.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/blob/applyMiddleware.ts/README.md)
 -----
 [bindActionCreators.ts](https://github.com/reduxjs/redux/tree/master/src)
 -----
