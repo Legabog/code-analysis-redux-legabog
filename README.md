@@ -1,7 +1,7 @@
 # redux/src
 [ссылка на репозиторий](https://github.com/reduxjs/redux/tree/master/src)
 -----
-### redux/src
+`branches`
 [applyMidddleware.ts](https://github.com/reduxjs/redux/tree/master/src)
 -----
 [bindActionCreators.ts](https://github.com/reduxjs/redux/tree/master/src)
