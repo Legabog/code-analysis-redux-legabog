@@ -15,5 +15,5 @@
 -----
 [index.ts](https://github.com/Legabog/source-code-analysis-redux-legabog/tree/index.ts)
 -----
-
+[Весь код был переведён с TypeScript на JavaScript с помощью TypeScript Playground](https://www.typescriptlang.org/play/)
 
