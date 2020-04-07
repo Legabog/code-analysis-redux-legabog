@@ -1,7 +1,7 @@
 # redux/src/createStore.ts
 
 `Код на TS`
-```
+```ts
 export default function createStore<
   S,
   A extends Action,
@@ -315,7 +315,7 @@ export default function createStore<
 }
 ```
 `Код на JS`
-```
+```js
 export default function createStore(reducer, preloadedState, enhancer) {
     if ((typeof preloadedState === 'function' && typeof enhancer === 'function') ||
         (typeof enhancer === 'function' && typeof arguments[3] === 'function')) {
