@@ -1,5 +1,5 @@
 # redux/src/bindActionCreators.ts
-
+// все проверки и манипулирования с actionCreators
 `Код на TS`  
   
 ```  
