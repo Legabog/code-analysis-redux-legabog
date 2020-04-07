@@ -1,12 +1,19 @@
 # redux/src
 [ссылка на репозиторий](https://github.com/reduxjs/redux/tree/master/src)
 -----
+### redux/src
 [applyMidddleware.ts](https://github.com/reduxjs/redux/tree/master/src)
+-----
 [bindActionCreators.ts](https://github.com/reduxjs/redux/tree/master/src)
+-----
 [combineReducers.ts](https://github.com/reduxjs/redux/tree/master/src)
+-----
 [compose.ts](https://github.com/reduxjs/redux/tree/master/src)
+-----
 [createStore.ts](https://github.com/reduxjs/redux/tree/master/src)
+-----
 [index.ts](https://github.com/reduxjs/redux/tree/master/src)
+-----
 
 redux/src/compose.ts
 Функциональное композиция
