@@ -6,7 +6,7 @@ redux/src/applyMiddleware.ts
 //основной принцип конвеер, первый middleare самостоятельно отрабатывает и запускает следующий middleware(1 -> 2 -> 3 -> ...)
 //применяется концепция каррирования
 
-`Код на TS`
+`Код на TS`  
 export default function applyMiddleware(): StoreEnhancer
 export default function applyMiddleware<Ext1, S>(
   middleware1: Middleware<Ext1, S, any>
