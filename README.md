@@ -1,7 +1,8 @@
 # redux/src/bindActionCreators.ts
 
-`Код на TS`
-
+`Код на TS`  
+  
+```  
 export default function bindActionCreators<A, C extends ActionCreator<A>>(
   actionCreator: C,
   dispatch: Dispatch
@@ -75,6 +76,7 @@ export default function bindActionCreators(actionCreators, dispatch) {
 // возвращаем получившийся объект    
     return boundActionCreators;
 }
+```
 
 
 
