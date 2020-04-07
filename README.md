@@ -3,7 +3,7 @@
 
 `Код на TS`  
   
-```  
+```ts  
 export default function combineReducers<S>(
   reducers: ReducersMapObject<S, any>
 ): Reducer<CombinedState<S>>
@@ -90,7 +90,7 @@ export default function combineReducers(reducers: ReducersMapObject) {
 ```
   
 `Код на JS`
-```
+```js
 // объявление функции combineReducers, в качестве аргументов выступают редьюсеры reducers
 export default function combineReducers(reducers) {
 // объявляем переменную reducerKeys и присваиваем массив свойств reducers
