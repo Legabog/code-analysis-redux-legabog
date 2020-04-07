@@ -1,5 +1,5 @@
 # redux/src/combineReducers.ts
-
+// функциональные возможности combineReducers, использующийся при создании rootReducer(объединяющего в себе множество рельюсеров)
 `Код на TS`  
   
 ```  
@@ -148,15 +148,21 @@ export default function combineReducers(reducers) {
         const nextState = {};
 // объявляем цикл от 0 до длины массива finalReducerKeys          
         for (let i = 0; i < finalReducerKeys.length; i++) {
+// объявляем переменную key внутри цикла и присваиваем ей i-тый элемент в массиве finalReducerKeys        
             const key = finalReducerKeys[i];
+// объявляем переменную reducer внутри цикла и присваиваем ей key-тый элемент в объекте finalReducers              
             const reducer = finalReducers[key];
+// объявляем переменную previousStateForKey внутри цикла и присваиваем ей key-тый элемент в объекте state              
             const previousStateForKey = state[key];
+// объявляем переменную nextStateForKey внутри цикла и присваиваем ей результат выполнения редьюсера со предыдущим state и action       
             const nextStateForKey = reducer(previousStateForKey, action);
+// если тип nextStateForKey равен undefined, создаём errorMessage и отображаем ошибку            
             if (typeof nextStateForKey === 'undefined') {
                 const errorMessage = getUndefinedStateErrorMessage(key, action);
                 throw new Error(errorMessage);
             }
-            nextState[key] = nextStateForKey;
+// в объект nextState добавляем nextStateForKey            
+            nextState[key] = nextStateForKey;            
             hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
         }
         hasChanged =
