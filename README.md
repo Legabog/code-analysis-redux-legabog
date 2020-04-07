@@ -1,6 +1,6 @@
 redux/src/applyMiddleware.ts
 
-//Middleware - расширение функциональности redux, дополнительная прослойка
+//Middleware - расширение функциональности redux, дополнительная прослойка  
 
 //applyMiddleware() - связывает store с middleware 
 //основной принцип конвеер, первый middleare самостоятельно отрабатывает и запускает следующий middleware(1 -> 2 -> 3 -> ...)
