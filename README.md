@@ -3,7 +3,7 @@
 
 `Код на TS`  
   
-```  
+```ts  
 export default function bindActionCreators<A, C extends ActionCreator<A>>(
   actionCreator: C,
   dispatch: Dispatch
@@ -52,7 +52,7 @@ export default function bindActionCreators(
 ```
   
 `Код на JS`
-```
+```js
 // объявление функции bindActionCreators с аргументами actionCreators, dispatch
 export default function bindActionCreators(actionCreators, dispatch) { 
 // если тип actionCreators равен функции, то возвращается bindActionCreator(actionCreators, dispatch)
