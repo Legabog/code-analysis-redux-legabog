@@ -12,7 +12,7 @@ function mapValues(obj, fn) { // функция mapValues принимает в 
   return Object.keys(obj).reduce((result, key) => { 
   // возвращает массив свойств объекта и с помощью reduce применяет callback функцию  
   // к кажому свойству, начальное значение пустой объект {}, в callback фунцию в  
-  //качестве аргументов передаётся result и key, result от ключа равен функции fn(obj[key], key).  
+  // качестве аргументов передаётся result и key, result от ключа равен функции fn(obj[key], key).  
     result[key] = fn(obj[key], key);
     return result;
   }, {});
@@ -20,7 +20,9 @@ function mapValues(obj, fn) { // функция mapValues принимает в 
 
 function pick(obj, fn) { // функция pick принимает в качестве аргументов объект и функцию
   return Object.keys(obj).reduce((result, key) => {
-  // возвращает массив свойств объекта и с помощью reduce применяет callback функцию к кажому свойству, начальное значение пустой объект {}, в callback фунцию в качестве аргументов передаётся result и key
+  // возвращает массив свойств объекта и с помощью reduce применяет callback функцию к  
+  // кажому свойству, начальное значение пустой объект {}, в callback фунцию в качестве  
+  // аргументов передаётся result и key
     if (fn(obj[key])) {
  // если fn(obj[key]) === true выполняется:
       result[key] = obj[key];
@@ -49,7 +51,8 @@ export function bindActionCreators(actionCreators, dispatch) { // фунция b
  `(...args) => f(g(h(...args)))`
  // выполнится h(...args) -> g(с результатом выполнения h(...args) -> на последнем этапе выполнится f(с реультатом g()) 
  // обычно принято называть такую цепочку функциональной композицией (функцией compose):
- // выполняется с права налево compose(f <- g <- h), обратное выполнение слева направо называется конвеер pipeline, pipe compose(f -> g -> h)
+ // выполняется с права налево compose(f <- g <- h), обратное выполнение слева направо  
+ // называется конвеер pipeline, pipe compose(f -> g -> h)
  `compose(f, g, h)`
  
 export function compose(...funcs) {
