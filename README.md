@@ -7,6 +7,7 @@ redux/src/applyMiddleware.ts
 //применяется концепция каррирования
 
 `Код на TS`  
+```
 export default function applyMiddleware(): StoreEnhancer
 export default function applyMiddleware<Ext1, S>(
   middleware1: Middleware<Ext1, S, any>
@@ -64,9 +65,9 @@ export default function applyMiddleware(
     }
   }
 }
-
+```
 `Код на JS`
-
+```
 export default function applyMiddleware(...middlewares) {
     return (createStore) => (reducer, ...args) => {
         const store = createStore(reducer, ...args);
@@ -83,6 +84,6 @@ export default function applyMiddleware(...middlewares) {
         return Object.assign(Object.assign({}, store), { dispatch });
     };
 }
-
+```
 
 
